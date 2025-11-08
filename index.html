@@ -6,11 +6,81 @@
     <title>Untitled</title>
     <link rel="stylesheet" href="./style.css">
 
-  </head>
+  </head><link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/v3.15.0/mapbox-gl.css'>
+
     
-  <body>
-  <div id="map">
-</div> 
+<body>
+  <!-- Map title -->
+  <div id="map-title">City of Berkeley Public Sports Fields</div>
+
+  <!-- Map container -->
+  <div id="map"></div>
+
+  <!-- Description and source section -->
+  <div id="map-info">
+    <p id="map-description">
+      Explore the locations of Berkeley’s public sports and recreational fields!  
+      Click on a field to view details such as amenities, park hours, and more.
+    </p>
+    <p id="map-source">
+      Cartography by Rachel Park, 2025.  
+      Data: Mapbox, OpenStreetMap, and City of Berkeley (2025).
+    </p>
+  </div>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Georgia, serif;
+      background-color: #fdfcfb;
+      overflow: hidden; /* Prevent page scrollbars */
+    }
+
+    /* Title styling */
+    #map-title {
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+      margin: 10px 0;
+      color: #523a1f;
+    }
+
+    /* Map container */
+    #map {
+      position: absolute;
+      width: 100%;
+    }
+
+    /* Blue info bar fixed at bottom */
+    #map-info {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: #a9cbf9; /* soft blue */
+      color: #523a1f;
+      text-align: center;
+      padding: 10px 20px;
+      border-top: 2px solid #7faee0;
+      box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Description text */
+    #map-description {
+      font-size: 18px;
+      margin: 4px 0;
+    }
+
+    /* Source text */
+    #map-source {
+      font-size: 12px;
+      margin: 2px 0;
+      color: #523a1f;
+    }
+  </style>
+</body>
+
+
 
 <script src='https://api.mapbox.com/mapbox-gl-js/v3.15.0/mapbox-gl.js'></script>
     <script  src="./script.js"></script>
@@ -18,3 +88,4 @@
   </body>
   
 </html>
+
